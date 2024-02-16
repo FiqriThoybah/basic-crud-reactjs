@@ -10,7 +10,7 @@ function Add() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/users/${id}`).then((res) => {
+    axios.get(`http://localhost:3008/users/${id}`).then((res) => {
       setName(res.data.name);
       setEmail(res.data.email);
       setPhone(res.data.phone);
@@ -27,7 +27,7 @@ function Add() {
 
   function Update(e) {
     e.preventDefault();
-    axios.put(`http://localhost:3001/users/${id}`, data).then(navigate("/"));
+    axios.put(`http://localhost:3008/users/${id}`, data).then(navigate("/"));
   }
   return (
     <div className="w-screen h-full flex flex-col justify-center items-center mt-16">

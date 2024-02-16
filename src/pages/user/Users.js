@@ -8,7 +8,7 @@ function Users() {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/users/${id}`).then((res) => {
+    axios.get(`http://localhost:3008/users/${id}`).then((res) => {
       setUser(res.data);
     });
   }, []);

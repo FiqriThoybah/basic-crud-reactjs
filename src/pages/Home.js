@@ -6,7 +6,7 @@ function Home() {
   const [users, setUsers] = useState([]);
 
   function loadUsers() {
-    axios.get("http://localhost:3001/users").then((res) => {
+    axios.get("http://localhost:3008/users").then((res) => {
       setUsers(res.data.reverse());
     });
   }
@@ -16,7 +16,7 @@ function Home() {
   }, []);
 
   function deleteUser(id) {
-    axios.delete(`http://localhost:3001/users/${id}`).then(loadUsers());
+    axios.delete(`http://localhost:3008/users/${id}`).then(loadUsers());
   }
 
   return (

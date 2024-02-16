@@ -16,7 +16,7 @@ function Add() {
 
   function submitForm(e) {
     e.preventDefault();
-    axios.post("http://localhost:3001/users", data).then(navigate("/"));
+    axios.post("http://localhost:3008/users", data).then(navigate("/"));
   }
   return (
     <div className="w-screen h-full flex flex-col justify-center items-center mt-16">
